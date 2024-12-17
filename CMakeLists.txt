@@ -33,6 +33,7 @@ target_link_libraries(asio INTERFACE Threads::Threads)
 enable_testing()
 
 configure_file(src/cmake/AdventOfCodeConfig.h.in src/cpp/generated/AdventOfCodeConfig.h)
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/src/cpp)
 
 add_executable(
         advent_of_code_2024_cpp
