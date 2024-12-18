@@ -2,6 +2,7 @@
 
 #include "generated/AdventOfCodeConfig.h"
 #include "DayOne.h"
+#include "DayTwo.h"
 
 int main() {
     std::cout << "Advent of Code 2024" << std::endl;
@@ -10,6 +11,8 @@ int main() {
     std::cout << std::endl;
 
     AdventOfCode::DayOne::run();
+    std::cout << std::endl;
+    AdventOfCode::DayTwo::run();
 
     return 0;
 }

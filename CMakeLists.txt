@@ -47,6 +47,8 @@ add_executable(
         src/cpp/main.cpp
         src/cpp/DayTwoParser.cpp
         src/cpp/DayTwoParser.h
+        src/cpp/DayTwo.cpp
+        src/cpp/DayTwo.h
 )
 
 target_link_libraries(
@@ -76,6 +78,9 @@ add_executable(
         src/cpp/DayTwoParser.cpp
         src/cpp/DayTwoParser.h
         src/cpp/DayTwoParserTests.cpp
+        src/cpp/DayTwo.cpp
+        src/cpp/DayTwo.h
+        src/cpp/DayTwoTests.cpp
 )
 
 target_link_libraries(
