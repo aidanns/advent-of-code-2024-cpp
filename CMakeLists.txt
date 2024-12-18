@@ -37,13 +37,13 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}/src/cpp)
 
 add_executable(
         advent_of_code_2024_cpp
-        src/cpp/main.cpp
+        src/cpp/DayOne.cpp
+        src/cpp/DayOne.h
         src/cpp/DayOneParser.cpp
         src/cpp/DayOneParser.h
         src/cpp/InputFileReader.cpp
         src/cpp/InputFileReader.h
-        src/cpp/DayOne.cpp
-        src/cpp/DayOne.h
+        src/cpp/main.cpp
 )
 
 target_link_libraries(
@@ -61,15 +61,15 @@ target_include_directories(
 
 add_executable(
         advent_of_code_2024_cpp_test
-        src/cpp/test.cpp
-        src/cpp/DayOneParser.cpp
-        src/cpp/DayOneParser.h
-        src/cpp/InputFileReader.cpp
-        src/cpp/InputFileReader.h
-        src/cpp/DayOneParserTests.cpp
         src/cpp/DayOne.cpp
         src/cpp/DayOne.h
+        src/cpp/DayOneParser.cpp
+        src/cpp/DayOneParser.h
+        src/cpp/DayOneParserTests.cpp
         src/cpp/DayOneTests.cpp
+        src/cpp/InputFileReader.cpp
+        src/cpp/InputFileReader.h
+        src/cpp/test.cpp
 )
 
 target_link_libraries(
