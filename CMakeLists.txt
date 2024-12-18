@@ -3,6 +3,7 @@ project(advent_of_code_2024_cpp VERSION 0.1.0)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++23")
 
 # Statically link libraries so we can run in a Docker scratch container.
 #set(BUILD_SHARED_LIBS OFF)
@@ -42,13 +43,13 @@ add_executable(
         src/cpp/DayOne.h
         src/cpp/DayOneParser.cpp
         src/cpp/DayOneParser.h
+        src/cpp/DayTwo.cpp
+        src/cpp/DayTwo.h
+        src/cpp/DayTwoParser.cpp
+        src/cpp/DayTwoParser.h
         src/cpp/InputFileReader.cpp
         src/cpp/InputFileReader.h
         src/cpp/main.cpp
-        src/cpp/DayTwoParser.cpp
-        src/cpp/DayTwoParser.h
-        src/cpp/DayTwo.cpp
-        src/cpp/DayTwo.h
 )
 
 target_link_libraries(
@@ -64,6 +65,8 @@ target_include_directories(
         ${EXTRA_INCLUDES}
 )
 
+target_compile_features(advent_of_code_2024_cpp PUBLIC cxx_std_23)
+
 add_executable(
         advent_of_code_2024_cpp_test
         src/cpp/DayOne.cpp
@@ -72,15 +75,15 @@ add_executable(
         src/cpp/DayOneParser.h
         src/cpp/DayOneParserTests.cpp
         src/cpp/DayOneTests.cpp
-        src/cpp/InputFileReader.cpp
-        src/cpp/InputFileReader.h
-        src/cpp/test.cpp
+        src/cpp/DayTwo.cpp
+        src/cpp/DayTwo.h
         src/cpp/DayTwoParser.cpp
         src/cpp/DayTwoParser.h
         src/cpp/DayTwoParserTests.cpp
-        src/cpp/DayTwo.cpp
-        src/cpp/DayTwo.h
         src/cpp/DayTwoTests.cpp
+        src/cpp/InputFileReader.cpp
+        src/cpp/InputFileReader.h
+        src/cpp/test.cpp
 )
 
 target_link_libraries(

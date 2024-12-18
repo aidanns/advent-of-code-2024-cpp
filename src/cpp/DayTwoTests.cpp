@@ -11,7 +11,7 @@
 
 namespace AdventOfCode::DayTwo {
 
-    constexpr int kDayTwoPartOneAnswer = 0;
+    constexpr int kDayTwoPartOneAnswer = 572;
     constexpr int kDayTwoPartTwoAnswer = 0;
 
     TEST(DayTwo, partOne) {
