@@ -34,6 +34,7 @@ namespace AdventOfCode::DayOne::Parser {
      */
     auto parseFile(const std::filesystem::path &inputFilePath,
                    const HandleEntryCallbackFunction &&handleEntryCallback) -> void;
+
 } // AdventOfCode::DayOne::Parser
 
 #endif //DAY_ONE_PARSER_H

@@ -18,4 +18,5 @@ namespace AdventOfCode::InputFileReader {
             handleLine(std::move(line));
         }
     }
+
 } // AdventOfCode::InputFileReader

@@ -58,7 +58,6 @@ namespace AdventOfCode::DayOne {
     }
 
     auto partTwoSolution(const Input &input) -> int {
-
         const auto firstValueToFrequencyMap = buildFrequencyMap(input.first);
         const auto secondValueToFrequencyMap = buildFrequencyMap(input.second);
 

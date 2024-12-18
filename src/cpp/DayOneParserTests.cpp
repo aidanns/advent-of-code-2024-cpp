@@ -43,4 +43,5 @@ namespace AdventOfCode::DayOne::Parser {
             ankerl::nanobench::doNotOptimizeAway(secondList);
         });
     }
+
 } // AdventOfCode::DayOne::Parser

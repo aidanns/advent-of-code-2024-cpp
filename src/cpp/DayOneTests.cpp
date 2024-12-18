@@ -44,5 +44,4 @@ namespace AdventOfCode::DayOne {
         });
     }
 
-
 } // AdventOfCode::DayOne

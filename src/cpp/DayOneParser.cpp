@@ -23,7 +23,6 @@ namespace AdventOfCode::DayOne::Parser {
 
     auto parseFile(const std::filesystem::path &inputFilePath,
                    const HandleEntryCallbackFunction &&handleEntryCallbackFunction) -> void {
-
         InputFileReader::readLines(inputFilePath, [&](auto &&line) -> void {
             int first = std::stoi(line);
             int second = std::stoi(line.substr(8));
