@@ -1,14 +1,6 @@
 cmake_minimum_required(VERSION 3.31)
 project(advent_of_code_2024_cpp VERSION 0.1.0)
 
-set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++23")
-
-# Statically link libraries so we can run in a Docker scratch container.
-#set(BUILD_SHARED_LIBS OFF)
-#set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++ -static")
-
 include(FetchContent)
 FetchContent_Declare(
         googletest
@@ -99,6 +91,8 @@ target_include_directories(
         "${PROJECT_BINARY_DIR}"
         ${EXTRA_INCLUDES}
 )
+
+target_compile_features(advent_of_code_2024_cpp_test PUBLIC cxx_std_23)
 
 include(GoogleTest)
 gtest_discover_tests(advent_of_code_2024_cpp_test)
