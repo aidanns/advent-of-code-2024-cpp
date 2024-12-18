@@ -5,6 +5,7 @@
 #include "DayOne.h"
 
 #include <iostream>
+#include <unordered_map>
 
 #include "DayOneParser.h"
 
@@ -42,7 +43,39 @@ namespace AdventOfCode::DayOne {
     }
 
     auto puzzleTwoSolution(const Input &input) -> int {
-        return 0;
+
+        std::unordered_map<int, int> firstMap{};
+        std::unordered_map<int, int> secondMap{};
+
+        for (const auto key : input.first) {
+            if (firstMap.contains(key)) {
+                auto newValue = firstMap.at(key) + 1;
+                firstMap.insert_or_assign(key, newValue);
+            } else {
+                firstMap.insert_or_assign(key, 1);
+            }
+        }
+
+        for (const auto key : input.second) {
+            if (secondMap.contains(key)) {
+                auto newValue = secondMap.at(key) + 1;
+                secondMap.insert_or_assign(key, newValue);
+            } else {
+                secondMap.insert_or_assign(key, 1);
+            }
+        }
+
+        int similarityScore = 0;
+
+        for (const auto value : firstMap) {
+            auto key = value.first;
+
+            if (secondMap.contains(key)) {
+                similarityScore += key * firstMap.at(key) * secondMap.at(key);
+            }
+        }
+
+        return similarityScore;
     }
 
 } // AdventOfCode

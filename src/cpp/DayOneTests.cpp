@@ -12,12 +12,20 @@
 namespace AdventOfCode::DayOne {
 
     constexpr int kDayOnePuzzleOneAnswer = 2742123;
+    constexpr int kDayOnePartTwoAnswer = 21328497;
 
     TEST(DayOne, puzzleOne) {
         const Input input = Parser::parseFile(Parser::kDayOneInputFilePath);
         int result = puzzleOneSolution(input);
 
         EXPECT_EQ(kDayOnePuzzleOneAnswer, result);
+    }
+
+    TEST(DayOne, partTwo) {
+        const Input input = Parser::parseFile(Parser::kDayOneInputFilePath);
+        int result = puzzleTwoSolution(input);
+
+        EXPECT_EQ(kDayOnePartTwoAnswer, result);
     }
 
     TEST(DayOneParser, benchmarkPuzzleOne) {
