@@ -42,6 +42,8 @@ add_executable(
         src/cpp/DayOneParser.h
         src/cpp/InputFileReader.cpp
         src/cpp/InputFileReader.h
+        src/cpp/DayOne.cpp
+        src/cpp/DayOne.h
 )
 
 target_link_libraries(
@@ -65,6 +67,9 @@ add_executable(
         src/cpp/InputFileReader.cpp
         src/cpp/InputFileReader.h
         src/cpp/DayOneParserTests.cpp
+        src/cpp/DayOne.cpp
+        src/cpp/DayOne.h
+        src/cpp/DayOneTests.cpp
 )
 
 target_link_libraries(

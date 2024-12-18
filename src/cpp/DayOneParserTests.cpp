@@ -15,7 +15,7 @@ namespace AdventOfCode::DayOne::Parser {
     constexpr int kDayOneInputLastRowFirstElement = 53640;
     constexpr int kDayOneInputLastRowSecondElement = 45703;
 
-    TEST(DayOneParser, Parses) {
+    TEST(DayOneParser, parses) {
         auto dayOneData = parseFile(kDayOneInputFilePath);
 
         EXPECT_EQ(kDayOneInputNumberOfRows, dayOneData.first.size());
