@@ -11,7 +11,7 @@
 
 namespace AdventOfCode::DayOne {
 
-    constexpr int kDayOnePuzzleOneAnswer = 0;
+    constexpr int kDayOnePuzzleOneAnswer = 2742123;
 
     TEST(DayOne, puzzleOne) {
         const Input input = Parser::parseFile(Parser::kDayOneInputFilePath);
