@@ -45,6 +45,8 @@ add_executable(
         src/cpp/InputFileReader.cpp
         src/cpp/InputFileReader.h
         src/cpp/main.cpp
+        src/cpp/DayTwoParser.cpp
+        src/cpp/DayTwoParser.h
 )
 
 target_link_libraries(
@@ -71,6 +73,9 @@ add_executable(
         src/cpp/InputFileReader.cpp
         src/cpp/InputFileReader.h
         src/cpp/test.cpp
+        src/cpp/DayTwoParser.cpp
+        src/cpp/DayTwoParser.h
+        src/cpp/DayTwoParserTests.cpp
 )
 
 target_link_libraries(
