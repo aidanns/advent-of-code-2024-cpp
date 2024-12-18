@@ -12,13 +12,13 @@
 namespace AdventOfCode::DayOne {
 
     auto run() -> void {
-        const Input input = Parser::parseFile(Parser::kDayOneInputFilePath);
+        const auto input = Parser::parseFile(Parser::kDayOneInputFilePath);
         std::cout << "Day One:" << std::endl;
-        std::cout << puzzleOneSolution(input) << std::endl;
-        std::cout << puzzleTwoSolution(input) << std::endl;
+        std::cout << partOneSolution(input) << std::endl;
+        std::cout << partTwoSolution(input) << std::endl;
     }
 
-    auto puzzleOneSolution(const Input &input) -> int {
+    auto partOneSolution(const Input &input) -> int {
         std::vector<int> firstList{input.first};
         std::make_heap(firstList.begin(), firstList.end());
 
@@ -57,18 +57,18 @@ namespace AdventOfCode::DayOne {
         return std::move(map);
     }
 
-    auto puzzleTwoSolution(const Input &input) -> int {
+    auto partTwoSolution(const Input &input) -> int {
 
-        const auto firstMap = buildFrequencyMap(input.first);
-        const auto secondMap = buildFrequencyMap(input.second);
+        const auto firstValueToFrequencyMap = buildFrequencyMap(input.first);
+        const auto secondValueToFrequencyMap = buildFrequencyMap(input.second);
 
         auto similarityScore = 0;
 
-        for (const auto value : firstMap) {
-            auto key = value.first;
+        for (const auto tuple : firstValueToFrequencyMap) {
+            auto key = tuple.first;
 
-            if (secondMap.contains(key)) {
-                similarityScore += key * firstMap.at(key) * secondMap.at(key);
+            if (secondValueToFrequencyMap.contains(key)) {
+                similarityScore += key * firstValueToFrequencyMap.at(key) * secondValueToFrequencyMap.at(key);
             }
         }
 

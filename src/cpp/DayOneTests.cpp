@@ -16,14 +16,14 @@ namespace AdventOfCode::DayOne {
 
     TEST(DayOne, puzzleOne) {
         const Input input = Parser::parseFile(Parser::kDayOneInputFilePath);
-        int result = puzzleOneSolution(input);
+        int result = partOneSolution(input);
 
         EXPECT_EQ(kDayOnePuzzleOneAnswer, result);
     }
 
     TEST(DayOne, partTwo) {
         const Input input = Parser::parseFile(Parser::kDayOneInputFilePath);
-        int result = puzzleTwoSolution(input);
+        int result = partTwoSolution(input);
 
         EXPECT_EQ(kDayOnePartTwoAnswer, result);
     }
@@ -32,7 +32,7 @@ namespace AdventOfCode::DayOne {
         const Input input = Parser::parseFile(Parser::kDayOneInputFilePath);
 
         ankerl::nanobench::Bench().run("Day 1 Puzzle 1", [&]() {
-            ankerl::nanobench::doNotOptimizeAway(puzzleOneSolution(input));
+            ankerl::nanobench::doNotOptimizeAway(partOneSolution(input));
         });
     }
 
@@ -40,7 +40,7 @@ namespace AdventOfCode::DayOne {
         const Input input = Parser::parseFile(Parser::kDayOneInputFilePath);
 
         ankerl::nanobench::Bench().run("Day 1 Part 2", [&]() {
-            ankerl::nanobench::doNotOptimizeAway(puzzleTwoSolution(input));
+            ankerl::nanobench::doNotOptimizeAway(partTwoSolution(input));
         });
     }
 

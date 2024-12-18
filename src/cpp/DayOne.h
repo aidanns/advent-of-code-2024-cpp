@@ -20,12 +20,12 @@ namespace AdventOfCode::DayOne {
     /**
      * Returns the output for day one puzzle one.
      */
-    auto puzzleOneSolution(const Input &input) -> int;
+    auto partOneSolution(const Input &input) -> int;
 
     /**
      * Returns the answer for day one puzzle two.
      */
-    auto puzzleTwoSolution(const Input &input) -> int;
+    auto partTwoSolution(const Input &input) -> int;
 
 } // AdventOfCode::DayOne
 
