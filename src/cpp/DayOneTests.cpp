@@ -36,5 +36,13 @@ namespace AdventOfCode::DayOne {
         });
     }
 
+    TEST(DayOneParser, benchmarkPartTwo) {
+        const Input input = Parser::parseFile(Parser::kDayOneInputFilePath);
+
+        ankerl::nanobench::Bench().run("Day 1 Part 2", [&]() {
+            ankerl::nanobench::doNotOptimizeAway(puzzleTwoSolution(input));
+        });
+    }
+
 
 } // AdventOfCode::DayOne
