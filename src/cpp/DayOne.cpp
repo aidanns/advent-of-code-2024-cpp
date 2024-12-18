@@ -42,30 +42,27 @@ namespace AdventOfCode::DayOne {
         return sumOfDifferences;
     }
 
+    auto buildFrequencyMap(const std::vector<int> & values) -> std::unordered_map<int, int> {
+        std::unordered_map<int, int> map{};
+
+        for (const auto key : values) {
+            if (map.contains(key)) {
+                const auto newValue = map.at(key) + 1;
+                map.insert_or_assign(key, newValue);
+            } else {
+                map.insert_or_assign(key, 1);
+            }
+        }
+
+        return std::move(map);
+    }
+
     auto puzzleTwoSolution(const Input &input) -> int {
 
-        std::unordered_map<int, int> firstMap{};
-        std::unordered_map<int, int> secondMap{};
+        const auto firstMap = buildFrequencyMap(input.first);
+        const auto secondMap = buildFrequencyMap(input.second);
 
-        for (const auto key : input.first) {
-            if (firstMap.contains(key)) {
-                auto newValue = firstMap.at(key) + 1;
-                firstMap.insert_or_assign(key, newValue);
-            } else {
-                firstMap.insert_or_assign(key, 1);
-            }
-        }
-
-        for (const auto key : input.second) {
-            if (secondMap.contains(key)) {
-                auto newValue = secondMap.at(key) + 1;
-                secondMap.insert_or_assign(key, newValue);
-            } else {
-                secondMap.insert_or_assign(key, 1);
-            }
-        }
-
-        int similarityScore = 0;
+        auto similarityScore = 0;
 
         for (const auto value : firstMap) {
             auto key = value.first;
